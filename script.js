@@ -431,3 +431,69 @@ console.log(arrayEjer38Map);
 // Dado un arreglo de números, utiliza el método filter para crear un nuevo arreglo que contenga solo los números positivos. 
 // Luego, utiliza el método reduce para calcular la suma de los números seleccionados.
 
+const arrayEjer39 = [-1,-2,-3,-4,-5,6,7,8,9,10]
+const arrayEjer39Filter = arrayEjer39.filter(numero => numero>0)
+const arrayEjer39Reduce = arrayEjer39Filter.reduce((a,b)=>{
+    return a + b
+})
+console.log(arrayEjer39Reduce);
+
+//40 .- Ejercicio combinado:
+// Dado un arreglo de objetos que representan productos, utiliza el método filter para crear un nuevo arreglo 
+// que contenga solo los productos con un precio mayor a $50. 
+// Luego, utiliza el método reduce para calcular el promedio de los precios de los productos seleccionados.
+
+const arrayEjer40 = [{producto:"Mochila",precio:10},{producto:"Mouse",precio:80},{producto:"Cuaderno",precio:60},{producto:"Martillo",precio:55},
+{producto:"WebCam",precio:70}]
+const arrayEjer40Filter = arrayEjer40.filter(elemento=>elemento.precio>50)
+const arrayEjer40reduce= arrayEjer40Filter.reduce((a,b)=> {
+    return a + b.precio
+},0)/arrayEjer40Filter.length
+console.log(arrayEjer40reduce);
+
+//41 .- Ejercicio de funciones:
+// Crea una función llamada saludar que tome un nombre como argumento y devuelva un mensaje de saludo, por ejemplo: "¡Hola, [nombre]!"
+
+function saludar (nombre) {
+    return (`¡Hola , ${nombre}!`)
+}
+ console.log(saludar("Stefano"))
+
+//42 .-  Ejercicio de funciones flecha:
+// Convierte la función saludar en una función flecha.
+
+let saludar = (nombre) => (`¡Hola , ${nombre}!`)
+
+console.log(saludar("Stefano"));
+
+//43 .- Ejercicio de funciones anónimas:
+// Crea una función anónima que tome dos números como argumentos y devuelva su suma.
+
+let anonima= function(num1,num2) {
+    return num1 + num2
+}
+console.log(anonima(9,8));
+
+//44 .- Ejercicio de funciones:
+// Crea una función llamada calcularPromedio que tome un arreglo de números como argumento y devuelva el promedio de esos números.
+
+const arrayEjer44 = [11,4]
+function calcularPromedio(arr) {
+    return (arr[0] + arr[1])/arr.length
+}
+
+console.log(calcularPromedio(arrayEjer44));
+
+//45 .- Ejercicio de funciones flecha:
+// Convierte la función calcularPromedio en una función flecha.
+
+const arrayEjer44Flecha = [11,4]
+let calcularPromedioFlecha = (arr) => (arr[0] + arr[1])/arr.length 
+
+console.log(calcularPromedioFlecha(arrayEjer44Flecha)); 
+
+//46 .- Ejercicio de funciones anónimas:
+// Crea una función anónima que tome un arreglo de palabras como argumento y devuelva un nuevo arreglo con la longitud de cada palabra.
+
+const 
+let funcionAnominaEjer46 = 
