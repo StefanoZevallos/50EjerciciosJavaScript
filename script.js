@@ -193,7 +193,7 @@ function esUna(texto) {
     }
 }
 
-esUna("Niños del Mundo , si cae España.. digo es un decir")
+esUna("Me llegue a confundir con ella tanto")
 
 //19 .- Ejercicio de map:
 // Dado un arreglo de nombres, utiliza el método map para crear un nuevo arreglo que contenga solo los nombres en mayúsculas.
@@ -217,7 +217,7 @@ console.log(arrayEjer20Filter);
 // 21 .- Dado un arreglo de palabras, utiliza el método reduce para calcular la 
 // cantidad total de caracteres de todas las palabras en el arreglo.
 
-const arrayEjer21 = ["Filosofia","Agresividad","Final","Estres","Ambiguedad","Toxicidad"]
+const arrayEjer21 = ["Cabestro","Mesita","Recodo","Fresco"]
 const arrayEjer21Reduce = arrayEjer21.reduce((acumulador,palabra)=> {
     return acumulador + palabra.length},0)
 console.log(arrayEjer21Reduce);
@@ -393,9 +393,41 @@ console.log(mayorQue(9,8))
 //35 .- Ejercicio de map:
 // Dado un arreglo de palabras, utiliza el método map para crear un nuevo arreglo que contenga la primera letra de cada palabra.
 
-const arrayEjer35 = ["Pelota","Cocina","Televisión","Teclado"]
-const arrayEjer35Map = arrayEjer35.map(elemento => {
-    for (let i=0 ; arrayEjer35.length ; i++) {
-        console.log(i)
-    }
+const arrayEjer35 = ["Hola", "Mundo", "JavaScript", "Map"];
+
+const arrayEjer35Map = palabras.map(palabra => palabra[0]);
+
+console.log(primeraLetra);
+
+//36 .- Ejercicio de filter:
+// Dado un arreglo de números, utiliza el método filter para crear un nuevo arreglo que contenga solo los números divisibles por 3
+
+const arrayEjer36 = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+const arrayEjer36Filter = arrayEjer36.filter(numero => numero%3===0)
+console.log(arrayEjer36Filter); 
+
+//37 .- Ejercicio de reduce:
+// Dado un arreglo de palabras, utiliza el método reduce para concatenar todas las palabras en una sola cadena.
+
+const arrayEjer37 = ["Mateo","Mario","Pepe","Juan","Pelusin"]
+const arrayEjer37Reduce = arrayEjer37.reduce((a,b)=> {
+    return a  + b 
 })
+console.log(arrayEjer37Reduce);
+
+//38 .- Ejercicio combinado:
+// Dado un arreglo de objetos que representan estudiantes, utiliza el método filter para crear un nuevo arreglo que contenga 
+// solo los estudiantes que tienen una calificación mayor a 90. 
+// Luego, utiliza el método map para crear un nuevo arreglo que contenga solo los nombres y calificaciones de esos estudiantes.
+
+const arrayEjer38 = [{estudiante:"Pepe",nota:100},{estudiante:"Juan",nota:95},{estudiante:"Stefano",nota:80}]
+const arrayEjer38Filter = arrayEjer38.filter(elemento=>elemento.nota>90)
+const arrayEjer38Map= arrayEjer38Filter.map(elemento=> {
+    return (elemento.estudiante + ":Nota " +elemento.nota)
+})
+console.log(arrayEjer38Map);
+
+//39 .- Ejercicio combinado:
+// Dado un arreglo de números, utiliza el método filter para crear un nuevo arreglo que contenga solo los números positivos. 
+// Luego, utiliza el método reduce para calcular la suma de los números seleccionados.
+
