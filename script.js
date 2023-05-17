@@ -495,5 +495,55 @@ console.log(calcularPromedioFlecha(arrayEjer44Flecha));
 //46 .- Ejercicio de funciones anónimas:
 // Crea una función anónima que tome un arreglo de palabras como argumento y devuelva un nuevo arreglo con la longitud de cada palabra.
 
-const 
-let funcionAnominaEjer46 = 
+const arrayEjer46 = ["Teclado","Parlante","Televisión"]
+let funcionAnominaEjer46 = (arr) => arrayEjer46.map(elemento=>elemento.length)
+console.log(funcionAnominaEjer46(arrayEjer46)); 
+
+//47 .- Ejercicio de funciones:
+// Crea una función llamada esPar que tome un número como argumento y devuelva true si el número es par, y false si no lo es.
+
+function esPar(numero) {
+    if(numero%2===0) {
+        return true
+    }
+    else {
+        return false
+    }
+}
+
+console.log(esPar(12));
+
+//48 .- Ejercicio de funciones flecha:
+// Convierte la función esPar en una función flecha.
+
+
+const ejer48 = (numero) =>  {if(numero%2===0) {
+    return true
+}
+else {
+    return false
+}}
+
+console.log(ejer48(9));  
+
+//49 .- Ejercicio de funciones anónimas:
+// Crea una función anónima que tome un arreglo de números como argumento y devuelva un nuevo arreglo con solo los números pares.
+
+const arrayEjer49 = [1,2,3,4,5,6,7,8,9,10]
+const ejer49 = function(arr) {
+  return  arr.filter(elemento => elemento%2===0)
+}
+console.log(ejer49(arrayEjer49));
+
+
+
+//50 .- Ejercicio de funciones:
+// Crea una función llamada convertirAMayusculas que tome una cadena como argumento y devuelva la cadena en mayúsculas.
+
+
+
+function convertirAMayusculas (nombre) {
+    return nombre.toUpperCase()
+}
+
+console.log(convertirAMayusculas("Stefano"));
