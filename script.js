@@ -344,3 +344,58 @@ console.log(arrayEjer30Map);
 // contenga solo los números que sean divisibles por 5 y mayores a 10. 
 // Luego, utiliza el método reduce para calcular la suma de los números seleccionados.
 
+const arrayEjer31 = [5,10,20,30,40,50,11,22,33,44,55]
+const arrayEjer31Filter = arrayEjer31.filter(elemento => {
+    if (elemento % 5 === 0 && elemento > 10) {
+        return elemento
+    }
+ })
+const arrayEjer31Reduce = arrayEjer31Filter.reduce((a,b)=> {
+    return a + b
+})
+console.log(arrayEjer31Reduce);
+
+//32 .- Ejercicio combinado:
+// Dado un arreglo de objetos que representan productos, utiliza el método filter para crear un 
+// nuevo arreglo que contenga solo los productos en stock con un precio menor a $100. 
+// Luego, utiliza el método reduce para calcular el precio total de los productos seleccionados.
+
+const arrayEjer32 = [{producto:"Lavadora",precio:10},{producto:"Licuadora",precio:30},{producto:"Computadora",precio:150},{producto:"Parlantes",precio:50}]
+const arrayEjer32Filter = arrayEjer32.filter(elemento=>elemento.precio<100)
+const arrayEjer32Reduce = arrayEjer32Filter.reduce((a,b)=> {
+    return a + b.precio
+},0)
+ console.log(arrayEjer32Reduce);
+
+//33 .- Ejercicio de bucles:
+//Escribe un bucle que imprima los números impares del 1 al 50 en la consola.
+
+for (let i=0; i<51 ;i++) {
+    if(!(i%2===0)) {
+        console.log(i)
+    }
+}
+
+//34 .- Ejercicio de condicionales:
+// Escribe una función que tome dos números como argumentos y devuelva el mayor de los dos.
+
+function mayorQue(arg1,arg2) {
+    if(arg1>arg2) {
+        return arg1
+    }
+    else { 
+        return arg2
+    }
+}
+
+console.log(mayorQue(9,8))
+
+//35 .- Ejercicio de map:
+// Dado un arreglo de palabras, utiliza el método map para crear un nuevo arreglo que contenga la primera letra de cada palabra.
+
+const arrayEjer35 = ["Pelota","Cocina","Televisión","Teclado"]
+const arrayEjer35Map = arrayEjer35.map(elemento => {
+    for (let i=0 ; arrayEjer35.length ; i++) {
+        console.log(i)
+    }
+})
